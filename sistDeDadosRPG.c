@@ -4,6 +4,8 @@
 
 int main(){
     int dado1, dado2, dado3, dado4, dado5, valordado, quantdados;
+
+    do{
     srand(time(0));
     dado1 = rand();
     dado2 = rand();
@@ -11,11 +13,14 @@ int main(){
     dado4 = rand();
     dado5 = rand();
 
-    printf("Bem-vindo ao sistema de dados para RPG!\nA seguir você irá decidir qual o tipo de dado que deseja rolar:\nDigite 1 para rolar um d3.\nDigite 2 para rolar um d4.\nDigite 3 para rolar um d6.\nDigite 4 para rolar um d8.\nDigite 5 para rolar um d10.\nDigite 6 para rolar um d12.\nDigite 7 para rolar um d20.\nDigite 8 para rolar um d24.\nDigite 9 para rolar um d100.\n"); 
+    printf("Bem-vindo ao sistema de dados para RPG!\nA seguir você irá decidir qual o tipo de dado que deseja rolar:\nDigite 1 para rolar um d3.\nDigite 2 para rolar um d4.\nDigite 3 para rolar um d6.\nDigite 4 para rolar um d8.\nDigite 5 para rolar um d10.\nDigite 6 para rolar um d12.\nDigite 7 para rolar um d20.\nDigite 8 para rolar um d24.\nDigite 9 para rolar um d100.\nDigite 0 para encerrar o programa!\n"); 
     scanf("%i", &valordado);
     
     switch (valordado)
     {
+    case 0:
+        break;
+        break;
     case 1:
         printf("Quantos dados você deseja rolar? Máximo 5\n");
         scanf("%i", &quantdados);
@@ -63,7 +68,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -115,7 +120,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -168,7 +173,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -221,7 +226,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -253,7 +258,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -285,7 +290,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -317,7 +322,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -349,7 +354,7 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
@@ -381,16 +386,19 @@ int main(){
             break;  
 
         default:
-            printf("Valor invalido");
+            printf("Valor invalido\n");
             break;
         }
         
         break;
 
     default:
-        printf("Valor invalido");
+        printf("Valor invalido\n");
         break;
     }
 
+    } while (valordado);
+    printf("Progarma encerrado!");
+    
     return 0;
 }
